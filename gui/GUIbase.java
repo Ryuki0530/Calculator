@@ -1,16 +1,19 @@
 package gui;
+import javax.swing.*; 
+import java.awt.*;
+import java.awt.event.*;
 
-public abstract class GUIbase {
+public abstract class GUIbase extends JPanel{
     //GUIを準備するためのメソッド
     public final void guiSet(){
-        GuiInit()
-        GuiLayout()
-        GuiListener()
+        GuiInit();
+        GuiLayout();
+        addListeners();
     }
     //Guiの初期化を行うメソッド
-    GuiInit();
+    public void GuiInit(){}
     //Guiのレイアウトを作成するメソッド
-    GuiLayout();
+    public abstract void GuiLayout();
     //Guiのリスナーをセットするメソッド
-    GuiListener();
+    public abstract void addListeners();
 }
