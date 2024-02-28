@@ -2,7 +2,7 @@ package calculator;
 import gui.*;
 import javax.swing.JFrame ;
 
-public class mainclass {
+public class mainclass  {
     
     private mainclass(){/*インスタンスの生成を禁止。*/}
     
@@ -12,7 +12,8 @@ public class mainclass {
                 Window.setSize(300, 200) ;
                 Window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 calculatorGUI c = new calculatorGUI();
-                c.GuiInit();
+                c.guiInit();
+                Window.add(c);
                 Window.setLocationByPlatform( true ) ;
                 Window.setVisible( true ) ;
     }
